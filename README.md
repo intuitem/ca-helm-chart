@@ -1,27 +1,33 @@
 ## Installation 
 
+### Add the repository
+
+```shell
+helm repo add intuitem https://intuitem.github.io/ca-helm-chart/
+```
+
 ### Pulling default values
 
-```
-helm show values . > ../custom-values.yaml
+```shell
+helm show values intuitem/ciso-assistant > my-values.yaml
 ```
 
 ### Creating a dedicated namespace
 
-```
+```shell
 kubectl create ns ciso-assistant
 ```
 
 ### Install
 
-```
-helm install my-release . -f ../custom-values.yaml -n ciso-assistant
+```shell
+helm install polpo intuitem/ciso-assistant -f my-values.yaml -n ciso-assistant
 ```
 
 ### Uninstall
 
-```
-helm uninstall my-release -n ciso-assistant
+```shell
+helm uninstall polpo -n ciso-assistant
 ```
 
 
@@ -30,4 +36,4 @@ helm uninstall my-release -n ciso-assistant
 When upgrading, make sure to:
 1. Backup your persistent volumes
 2. Update any custom values
-3. Run: helm upgrade my-release . --set global.appVersion=<new_version>
+3. Run: helm upgrade my-release . --set global.appVersion=vx.y.z
