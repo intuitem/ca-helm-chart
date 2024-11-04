@@ -4,7 +4,7 @@ emailAdmin: admin@example.net
 frontendOrigin: "" # Leave empty to use default ORIGIN, or set custom value
 global:
   # Override appVersion from Chart.yaml if needed
-  appVersion: "v1.9.3" # When empty, will use Chart.yaml's appVersion
+  appVersion: "v1.9.7" # When empty, will use Chart.yaml's appVersion
 
 email:
   defaultFrom: no-reply@ciso-assistant.net
