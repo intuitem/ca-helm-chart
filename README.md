@@ -1,3 +1,5 @@
+## official helm chart is now on GH registry - checkout the [documentation](https://intuitem.gitbook.io/ciso-assistant/deployment/helm-chart)
+
 ## Installation 
 
 ### Add the repository
